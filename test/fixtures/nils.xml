@@ -1,0 +1,8 @@
+<user nick="Nils" password="aaaaaaaaaaaaaaaaaaaaaaaaaaaa" version="1">
+	<setting name="away">I&apos;m busy</setting>
+	<setting name="last_version">197120</setting>
+	<account protocol="oscar" handle="12345678" password="bbbbbbbbbbbbbbbbbbbbb" autoconnect="true" tag="icq" server="127.0.0.1"/>
+	<channel name="&amp;bitlbee" type="control">
+		<setting name="auto_join">true</setting>
+	</channel>
+</user>
