@@ -48,7 +48,7 @@ module BitlbeeConfig
       # @param [String] username User to delete config for
       def delete_from_directory_for_user(directory, username)
         file_to_delete = File.join(directory, BitlbeeConfig::User.username_to_filename(username))
-        File.delete(file_to_delete) if File.exists?(file_to_delete)
+        File.delete(file_to_delete) if File.exist?(file_to_delete)
       end
     end
 

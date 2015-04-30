@@ -4,6 +4,9 @@ AllCops:
   Exclude:
     - tmp/**
 
+AbcSize:
+  Max: 30
+
 CollectionMethods:
   PreferredMethods:
     Enabled: false
@@ -33,3 +36,6 @@ RegexpLiteral:
 
 StringLiterals:
   EnforcedStyle: double_quotes
+
+StringLiteralsInInterpolation:
+  Enabled: false

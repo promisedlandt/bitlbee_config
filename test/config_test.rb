@@ -16,12 +16,12 @@ describe BitlbeeConfig::Config do
     end
 
     it "deletes a user configuration file from a given directory" do
-      assert File.exists?(File.join(@config_dir, "nils.xml"))
+      assert File.exist?(File.join(@config_dir, "nils.xml"))
 
       BitlbeeConfig::Config.delete_from_directory_for_user(@config_dir, "Nils")
 
-      refute File.exists?(File.join(@config_dir, "nils.xml"))
-      assert File.exists?(File.join(@config_dir, "malte.xml"))
+      refute File.exist?(File.join(@config_dir, "nils.xml"))
+      assert File.exist?(File.join(@config_dir, "malte.xml"))
     end
 
     after do
@@ -44,7 +44,7 @@ describe BitlbeeConfig::Config do
       configs.each { |config| config.save_to_directory(@output_dir) }
 
       user_names.each do |user_name|
-        assert File.exists?(File.join(@output_dir, "#{ user_name }.xml"))
+        assert File.exist?(File.join(@output_dir, "#{ user_name }.xml"))
       end
     end
 
@@ -54,7 +54,7 @@ describe BitlbeeConfig::Config do
       config = BitlbeeConfig::Config.new(user: BitlbeeConfig::User.new(nick: user_name))
       config.save_to_directory(@output_dir)
 
-      assert File.exists?(File.join(@output_dir, "#{ user_name.downcase }.xml"))
+      assert File.exist?(File.join(@output_dir, "#{ user_name.downcase }.xml"))
     end
 
     after do

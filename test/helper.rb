@@ -25,7 +25,7 @@ def assert_buildable_object_attribute_equals(buildable_object, attribute_name, a
   xml_builder = Nokogiri::XML::Builder.new
   buildable_object.build_xml(xml_builder)
 
-  assert_includes xml_builder.doc.root.to_xml, "#{ attribute_name.to_s }=\"#{ attribute_value }\""
+  assert_includes xml_builder.doc.root.to_xml, "#{ attribute_name }=\"#{ attribute_value }\""
 end
 
 def build_xml_from_object(buildable_object)
