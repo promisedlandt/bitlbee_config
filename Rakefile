@@ -3,14 +3,13 @@ require "rake/testtask"
 require "rubocop/rake_task"
 require "yard"
 
-
 desc "Start guard for minitest"
 task :guard do
   sh "guard --no-interactions --notify false --clear"
 end
 
 desc "Run rubocop linter"
-Rubocop::RakeTask.new(:rubocop) do |task|
+RuboCop::RakeTask.new(:rubocop) do |task|
   task.formatters = %w(simple)
 end
 

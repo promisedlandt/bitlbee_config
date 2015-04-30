@@ -1,12 +1,12 @@
 AllCops:
-  Includes:
+  Include:
     - Guardfile
-  Excludes:
+  Exclude:
     - tmp/**
 
 CollectionMethods:
   PreferredMethods:
-  Enabled: false
+    Enabled: false
     #collect: 'collect'
     #collect!: 'collect!'
     #inject: 'inject'
